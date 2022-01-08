@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  active-mq:
+    image: rmohr/activemq
+    ports:
+    - "61616:61616"
+    - "8161:8161"
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
